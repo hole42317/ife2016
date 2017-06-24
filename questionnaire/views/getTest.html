@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="javascripts/jquery-3.2.1.js"></script>
+    <title>1</title>
+</head>
+<body>
+<input onclick="abcd()" type="button">
+<script>
+    function abcd(){
+        alert("123");
+        var xhr=new XMLHttpRequest();
+        xhr.open("post","11111111111111111",true);
+        /*$.ajax({
+            url: "/save",
+            type: "post",
+            data: {
+                name: "henry",
+                age: 30,
+                hobby: [ "sport", "coding" ]
+            }
+        });*/
+        $.ajax({
+            url:"/page1",
+            type:"get",
+            dataCode:"1",
+            success:function(data){
+                console.log(data);
+                //document.getElementsByTagName('body')[0].innerHTML=data;
+                $("body").html(data);
+            }
+        });
+    }
+</script>
+</body>
+</html>

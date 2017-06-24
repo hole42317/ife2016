@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>page1</title>
+    <link type="text/css" href="/stylesheets/page1.css" rel="stylesheet">
+    <script src="javascripts/jquery-3.2.1.js"></script>
+    <style>
+        #editTitle,.editQuestion,#editQuestionAddTop, .editQuestionAddTopUnit{
+            border:1px solid darkgoldenrod;
+        }
+        #editTitle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80px;
+            position: relative;
+        }
+        .editQuestion{
+            height: 100px;
+            margin-top: 20px;
+            padding: 20px;
+        }
+        .editQuestionSelect{
+            margin-left: 50px;
+            margin-top: 10px;
+        }
+        .editQuestionText{
+            height: 60px;
+            width: 100%;
+        }
+        .isMust{
+            float: right;
+        }
+        #editQuestionAdd{
+            height: 140px;
+            padding: 20px;
+        }
+        #editQuestionAddTop{
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .editQuestionAddTopUnit{
+            height: 30px;
+            width: 100px;
+            margin-left: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #editQuestionAddBottom{
+            height: 80px;
+            background-color: #c7c7c7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .editQuestionAddBottomUnit{
+
+        }
+    </style>
+</head>
+<body>
+<div id="title">
+    <div>
+        <h2>问卷调查</h2>
+    </div>
+    <div>
+        <span>我的问卷</span>
+    </div>
+</div>
+<div id="mainBodyBox">
+    <div class="mainBody">
+        <span>标题</span>
+        <span>时间</span>
+        <span>状态</span>
+        <span>操作</span>
+        <a href="newQuestion"><input type="button" value="新建问卷" style="position: absolute;left: 850px" onclick="newFile"></a>
+    </div>
+<script>
+    function newFile(){
+
+    }
+</script>
+
+</div>
+<script src="javascripts/getData.js"></script>
+</body>
+</html>

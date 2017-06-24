@@ -1,0 +1,117 @@
+/*page1 start*/
+.mainBody{
+    border: 1px solid red;
+}
+.bodyMain{
+    color: red;
+}
+body{
+    margin: 0;
+    background-color: #bebfc1;
+}
+#title{
+    height: 40px;
+    background-color: #ee751b;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 150px;
+    color: #ffffff;
+}
+#title span{
+    margin-left: 150px;
+}
+#mainBodyBox{
+    width: auto;
+    margin: 100px 100px;
+    background-color: #ffffff;
+
+}
+.mainBody:first-child{
+    background-color: #efefef;
+}
+.mainBody:first-child input{
+    background-color: #EE751B;
+    width: 10%;
+    border: none;
+}
+.mainBody{
+    height: 50px;
+    margin-top: 0;
+    position: relative;
+}
+.mainBody span:nth-child(1){
+    position: absolute;left: 50px;top: 17px;
+}
+.mainBody span:nth-child(2){
+    position: absolute;left: 250px;top: 17px;
+}
+.mainBody span:nth-child(3){
+    position: absolute;left: 450px;top: 17px;
+}
+.mainBody span:nth-child(4){
+    position: absolute;left: 650px;top: 17px;
+}
+.mainBody div:nth-child(4){
+    position: absolute;left: 650px;top: 17px;
+}
+/*page1 end*/
+
+
+
+/*edit start*/
+#editTitle,.editQuestion,#editQuestionAddTop, .editQuestionAddTopUnit{
+    border:1px solid darkgoldenrod;
+}
+#editTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    position: relative;
+}
+.editQuestion{
+    height: 100px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.editQuestionSelect{
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.editQuestionText{
+    height: 60px;
+    width: 100%;
+}
+.isMust{
+    float: right;
+}
+#editQuestionAdd{
+    height: 140px;
+    padding: 20px;
+}
+#editQuestionAddTop{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editQuestionAddTopUnit{
+    height: 30px;
+    width: 100px;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#editQuestionAddBottom{
+    height: 80px;
+    background-color: #c7c7c7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.editQuestionAddBottomUnit{
+
+}
+/*edit end*/
