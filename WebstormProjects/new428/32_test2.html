@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>322</title>
+    <style>
+        #box1{
+            border: 1px solid red;
+            height: 100px;
+            width: 400px;
+        }
+        #box2{
+            border: 1px solid blue;
+            height: 100px;
+            width: 400px;
+        }
+        #box3{
+            border: 1px solid green;
+            height: 100px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="box1">1</div>
+<div id="box2">2</div>
+<div id="box3">3</div>
+<input value="1" type="button" onclick="ac()">
+<input value="2" type="button" onclick="bc()">
+<script>
+    function ac(){
+       // var a1=document.getElementById('box1');
+        var a2=document.getElementById('box2');
+        var a3=document.getElementById('box3');
+
+        a2.style.display='none';
+        a3.style.display='block';
+    }
+
+    function bc(){
+        var a2=document.getElementById('box2');
+        var a3=document.getElementById('box3');
+
+        a2.style.display='block';
+        a3.style.display='none';
+    }
+</script>
+</body>
+</html>

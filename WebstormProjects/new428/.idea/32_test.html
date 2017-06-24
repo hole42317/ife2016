@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test_32</title>
+</head>
+<body>
+<form onchange="ab()">
+    <input name="123" type="radio"><label for="123">1</label>
+    <input name="123" type="radio"><label for="123">2</label>
+    <input name="123" type="radio"><label for="123">3</label>
+</form>
+<span id="1" style="color: red; display: block">请点选</span>
+<span id="2" style="color: green; display: none">已点选</span>
+<form onchange="bc(event)">
+    <input type="checkbox" name="mul"><label for="mul">11</label>
+    <input type="checkbox" name="mul"><label for="mul">22</label>
+    <input type="checkbox" name="mul"><label for="mul">33</label>
+</form>
+<span id="3" style="color: red; display: block">请点选</span>
+<span id="4" style="color: green; display: none">已点选</span>
+
+
+<script>
+    function ab(){
+        var form=document.getElementsByTagName('form')[0];
+        var input=form.getElementsByTagName('input');
+        var notice1=document.getElementById('1');
+        var notice2=document.getElementById('2');
+        for(var i= 0,len=input.length;i<len;i++){
+            if(form[i].checked) {
+                notice1.style.display='none';
+                notice2.style.display='block';
+            }
+        }
+    }
+
+    function bc(event){
+        var tar=event.target;
+        var k=[0,0,0];
+        var form=tar.parentNode;
+       // var form=document.getElementsByTagName('form')[1];
+        var input=form.getElementsByTagName('input');
+        var notice1=document.getElementById('3');
+        var notice2=document.getElementById('4');
+
+        for(var i= 0,len=input.length;i<len;i++){
+            if(form[i].checked) {
+                k[i]=1;
+            }
+        }
+        if(k.indexOf(1)>-1){
+            notice1.style.display='none';
+            notice2.style.display='block';
+        }
+        else {
+            notice1.style.display='block';
+            notice2.style.display='none';
+        }
+    }
+</script>
+
+</body>
+</html>

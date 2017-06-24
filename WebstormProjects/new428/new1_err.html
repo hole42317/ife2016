@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22</title>
+    <style>
+        .box1{
+            height: 300px;
+            display: flex;
+            border: 1px solid red;
+            background-color: white;
+        }
+        .box2{
+            display: flex;
+            justify-content: center;
+            border:1px solid red;
+            width: 45%;
+            margin: 20px;
+            background-color: white;
+        }
+        div span{
+            position: absolute;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="box1"><span>a</span>
+    <div class="box2"><span>b</span>
+        <div class="box2"><span>c</span>
+            <div class="box2"><span>d</span></div>
+            <div class="box2"><span>e</span></div>
+            <div class="box2"><span>f</span></div>
+        </div>
+        <div class="box2"><span>g</span>
+            <div class="box2"><span>h</span></div>
+            <div class="box2"><span>i</span></div>
+        </div>
+    </div>
+    <div class="box2"><span>j</span>
+        <div class="box2"><span>k</span>
+            <div class="box2"><span>l</span></div>
+            <div class="box2"><span>m</span></div>
+        </div>
+        <div class="box2"><span>n</span>
+            <div class="box2"><span>o</span></div>
+            <div class="box2"><span>p</span></div>
+        </div>
+    </div>
+</div>
+<input type="button" value="前序遍历">
+<input type="text" value="c">
+<input type="button">
+
+<script>
+    var all=[];
+    var iq=0;
+    var btn=document.getElementsByTagName('input')[0];
+    var node=document.getElementsByClassName('box1')[0];
+    var textvalue=document.getElementsByTagName('input')[1];
+    var find=document.getElementsByTagName('input')[2];
+
+    btn.onclick=function(){
+        pre(node);
+        show();
+
+    };
+
+    find.onclick= function () {
+        //alert(textvalue.value);
+        //var a= findelement(node);
+        show();
+        //alert(all.length);
+    };
+
+
+    function findelement(node){
+        all.push(node);
+        if (node.childNodes[0].innerHTML==textvalue.value){
+            iq=1;
+            return;
+        }
+            for(var i=0;i<node.childNodes.length;i++){
+                if(node.childNodes[i].className){
+                    pre(node.childNodes[i]);
+                    if (iq==1) return;
+
+            }
+        }
+
+    }
+
+
+    function pre(node){
+        all.push(node);
+        for(var i=0;i<node.childNodes.length;i++){
+            if(node.childNodes[i].className){
+                pre(node.childNodes[i]);
+            }
+        }
+        // if(node.childNodes[1]) pre(node.childNodes[1]);
+        // if(node.childNodes[3]) pre(node.childNodes[3]);
+    }
+
+    function mid(node) {
+        for (var i = 0; i < node.childNodes.length; i++) {
+            if (node.childNodes[i].className == 'DIV') {
+                pre(node.childNodes[i]);
+            }
+        }
+    }
+
+        function show() {
+            var timer = setInterval(function () {
+                var now = all.shift();
+                now.style.backgroundColor = 'blue';
+                setTimeout(function () {
+                    now.style.backgroundColor = 'white';
+                }, 250);
+            }, 500);
+
+
+            // if (all.length==0) clearInterval(timer);
+        }
+
+
+
+</script>
+
+</body>
+</html>

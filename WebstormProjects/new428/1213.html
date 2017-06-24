@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var a,b, c,i=0;
+    function ab(){
+        for(a=0;a<10;a++){
+            for(b=0;b<10;b++){
+                for(c=0;c<10;c++){
+                    if(b==4&&c==4)
+                        return;
+                    else ab();
+                }
+            }
+        }
+    }
+    ab();
+    alert(i);
+</script>
+</body>
+</html>

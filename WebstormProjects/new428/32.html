@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>32</title>
+    <style>
+        #box{
+            display: flex;
+            justify-content: space-between;
+        }
+        #left{
+            width: 30%;
+        }
+        #right{
+            height: 400px;
+            width: 50%;
+            border: 1px solid grey;
+        }
+        form input{
+            margin-top: 30px;
+        }
+        #setting1{
+            border: 1px solid red;
+        }
+        #setting2{
+            border: 1px solid red;
+        }
+        #setting3{
+            border: 1px solid red;
+
+        }
+        #setting4{
+            border: 1px solid blue;
+        }
+        #setting5{
+            border: 1px solid green;
+        }
+        #setting3 > span{
+            float: left;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+<div id="left">
+<form id="setting">
+    <select id="setting1">
+        <option value="single">单选框</option>
+        <option value="mul">多选框</option>
+        <option value="input">输入</option>
+    </select><br><br><br>
+    <div id="setting2">
+        <form >
+            <input type="radio" id="must" name="isMust" value="isMust">必填
+            <input type="radio" id="mustnot" name="isMust" value="isNotMust">选填<br>
+            <span>名称</span><input id="name">
+            <input type="button" onclick="getName()">
+        </form><br><br><br>
+    </div>
+    <div id="setting3" style="display: block">
+    <form onclick="del(event)">
+        <input id="item1" placeholder="请输入选项用空格隔开"><input type="button" onclick="addselect()"> <br>
+    </form><br><br><br>
+    </div>
+    <div id="setting4" style="display:none">
+    <form>
+        <input type="radio" name="s4">邮件
+        <input type="radio" name="s4">电话
+        <input type="radio" name="s4">文字
+        <input type="radio" name="s4">数字
+        <input type="radio" name="s4">密码
+
+    </form>
+    </div>
+    <form id="setting5" style="display:none">
+        <input id="len"><br>
+    </form>
+    <input type="submit" value="add" id="add" onclick="newfrom()">
+    <input type="reset" value="reset">
+</form>
+
+</div>
+<div id="right"><p>演示区</p></div>
+</div><script src="32.js"></script>
+</body>
+</html>

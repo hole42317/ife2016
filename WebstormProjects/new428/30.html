@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>30</title>
+    <style>
+        #1{
+            display: none;
+        }
+        #2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<form onclick="ab()">
+    <input type="radio" name="12">在校生
+    <input type="radio" name="12">非在校生
+
+    <div id="1" style="display: none">
+        <span>学校</span>
+        <select id="city" onchange="show()">
+        <!-- 城市名-->
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <select id="school">
+            <!-- 学校名-->
+            <option value="A">A1</option>
+            <option value="B">A2</option>
+            <option value="B">A3</option>
+        </select>
+    </div>
+    <div id="2" style="display: none">
+        <span>就业单位</span>
+        <input type="text">
+    </div>
+</form>
+<script>
+
+    function ab(){
+        if(document.getElementsByName('12')[0].checked) {
+            document.getElementById('1').style.display='block';
+            document.getElementById('2').style.display='none';
+        }
+        if(document.getElementsByName('12')[1].checked){
+            document.getElementById('1').style.display='none';
+            document.getElementById('2').style.display='block';
+        }
+    }
+
+    var sc=[
+            ["A1","A2","A3"],
+            ["B1","B2","B3"]
+    ]
+
+    function show(){
+
+        var city=document.getElementById('city');
+        var school=document.getElementById('school');
+
+        for(var i= 0,len=school.options.length;i<len;i++){
+            school.remove(0);
+        }//清除选项 之后重新添加
+
+        if (city.value=='A'){
+            for (var i= 0,len=sc[0].length;i<len;i++){
+                var newoption=new Option(sc[0][i]);
+                school.add(newoption,undefined);
+            }
+        }
+
+        if (city.value=='B'){
+            for (var i= 0,len=sc[0].length;i<len;i++){
+                var newoption=new Option(sc[1][i]);
+                school.add(newoption,undefined);
+            }
+        }
+    }
+    function init(){
+        var form=document.getElementsByTagName('form')[0];
+        var school=document.getElementById('school');
+        form.onclick=function(){
+            ab();
+        };
+        school.onchange=function(){
+            show();
+        };
+    }
+    init();
+    //alert("123");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>38</title>
+</head>
+<body>
+<p>成绩录入</p>
+<div id="pointshow">
+    <form>
+        <span>姓名</span><input>
+        <span>语文</span><input>
+        <span>数学</span><input>
+        <span>英语</span><input>
+        <span>&nbsp;&nbsp;</span><input type="button" value="提交" onclick="getData()">
+        <input value="语文" onclick="sortAsChinese()" type="button">
+        <input value="数学" onclick="sortAsMath()" type="button">
+        <input value="英语" onclick="sortAsEnglish()" type="button"><br>
+
+
+    </form>
+</div>
+
+<script>
+    var data=[];
+    var aa=["姓名","语文","数学","英语"];
+    //data.push(aa);
+    var div=document.getElementById('pointshow');
+    var input=div.getElementsByTagName('input');
+    function getData(){
+        var datapart=[];
+        for(var i= 0,len=4;i<len;i++){
+            if(input[i].value){
+                datapart.push(input[i].value);
+            }
+            else {
+                datapart=[];
+                alert('empty')
+                break;
+            }
+        }
+        if (datapart.length) data.push(datapart);
+        //console.log(data);
+        show(data);
+    }
+    function show(item){
+        if(document.getElementsByTagName('table')[0]){
+            clear();
+        }
+        var body=document.getElementsByTagName('body')[0];
+        var table=document.createElement('table');
+        table.border=1;
+        table.width="400px";
+        table.style.paddingLeft='auto';
+        body.appendChild(table);
+        var tbody=document.createElement('tbody');
+        table.appendChild(tbody);
+
+        tbody.insertRow(0);
+       // tbody.rows[0].insertCell(0);
+       // tbody.rows[0].style.position='fixed';
+       // tbody.rows[0].style.width='1500px';
+        tbody.rows[0].insertCell(0).appendChild(document.createTextNode('姓名'));
+
+         //tbody.rows[0].insertCell(1);
+        tbody.rows[0].insertCell(1).appendChild(document.createTextNode('语文'));
+
+       // tbody.rows[0].insertCell(2);
+        tbody.rows[0].insertCell(2).appendChild(document.createTextNode('数学'));
+
+        //tbody.rows[0].insertCell(3);
+        tbody.rows[0].insertCell(3).appendChild(document.createTextNode('英语'));
+
+        for(var i= 0,len1=item.length;i<len1;i++){
+            tbody.insertRow(i+1);
+            for(var k= 0,len2=item[i].length;k<len2;k++){
+                tbody.rows[i+1].insertCell(k);
+                tbody.rows[i+1].cells[k].appendChild(document.createTextNode(item[i][k]));
+            }
+        }/**/
+    }
+
+    function clear(){
+        var table=document.getElementsByTagName('table')[0];
+        table.parentNode.removeChild(table);
+    }
+
+    function sortAsChinese(){
+        for(var i=data.length;i>0;i--){
+            for(var k= 0;k<i-1;k++){
+                if(data[k][1]>data[k+1][1]){
+                    var cache=data[k];
+                    data[k]=data[k+1];
+                    data[k+1]=cache;
+                }
+            }
+        }
+        show(data);
+    }
+
+    function sortAsMath(){
+        for(var i=data.length;i>0;i--){
+            for(var k= 0;k<i-1;k++){
+                if(data[k][2]>data[k+1][2]){
+                    var cache=data[k];
+                    data[k]=data[k+1];
+                    data[k+1]=cache;
+                }
+            }
+        }
+        show(data);
+    }
+
+    function sortAsEnglish(){
+        for(var i=data.length;i>0;i--){
+            for(var k= 0;k<i-1;k++){
+                if(data[k][3]>data[k+1][3]){
+                    var cache=data[k];
+                    data[k]=data[k+1];
+                    data[k+1]=cache;
+                }
+            }
+        }
+        show(data);
+    }
+</script>
+</body>
+</html>

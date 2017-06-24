@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>22</title>
+    <style>
+        .box1{
+            height: 300px;
+            display: flex;
+            border: 1px solid red;
+            background-color: white;
+        }
+        .box2{
+            display: flex;
+            justify-content: center;
+            border:1px solid red;
+            width: 45%;
+            margin: 20px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2">
+        <div class="box2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div>
+        <div class="box2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="box2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div>
+        <div class="box2">
+            <div class="box2"></div>
+            <div class="box2"></div>
+        </div>
+    </div>
+</div>
+<input type="button" value="前序遍历">
+
+<script>
+    var all=[];
+    var btn=document.getElementsByTagName('input')[0];
+    var node=document.getElementsByClassName('box1')[0];
+    btn.onclick=function(){
+        pre(node);
+        show();
+
+    };
+
+    function pre(node){
+        all.push(node);
+        for(var i=0;i<node.childNodes.length;i++){
+            if(node.childNodes[i].className){
+                pre(node.childNodes[i]);
+            }
+        }
+       // if(node.childNodes[1]) pre(node.childNodes[1]);
+       // if(node.childNodes[3]) pre(node.childNodes[3]);
+    }
+
+    function show() {
+        var timer = setInterval(function () {
+            var now = all.shift();
+            now.style.backgroundColor = 'blue';
+            setTimeout(function () {
+                now.style.backgroundColor = 'white';
+            }, 250);
+        }, 500);
+
+
+       // if (all.length==0) clearInterval(timer);
+    }
+
+
+
+</script>
+
+</body>
+</html>

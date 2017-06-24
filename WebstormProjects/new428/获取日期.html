@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取日期</title>
+    <style>
+        #box{
+            border: 1px solid #ff0000;
+            height: 400px;
+            width: 358px;
+            display: -webkit-flex;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box1,.last,.next{
+            text-align:center;
+            line-height: 50px;
+            height: 50px;
+            width: 50px;
+            padding-top: 0px;
+            padding: auto;
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+    <input type="button" value="显示日历" id="displayCalendar" onclick="calendarDisplay()">
+    <input id="dateInput">
+</div>
+<div id="calendar">
+    <div>
+        <input type="button" value="上一月" onclick="last()">
+        <span id="yearAndMonth"></span>
+        <input type="button" value="下一月" onclick="next()">
+    </div>
+
+    <div id="box"></div>
+</div>
+
+<script>
+    var div=document.getElementsByTagName('div')[0];
+    var show=new Date();
+    var year=show.getYear()+1900;
+    var month=show.getMonth()+1;
+    var day=show.getDate();
+    var weekDay=getWeekDay(year,month,1);
+    var calendar=[];
+    var add;
+    var focusDay;
+    var lastTar;
+
+    window.onload=function(){
+        showDate();
+        showCalendar();
+    }
+
+            function isAddOneDay(){
+        if(year%4==0){
+            add=1;
+        }
+        else {
+            add=0;
+        }
+    }
+    function last(){
+        if(month>0){
+            month--;
+            show.setMonth(show.getMonth()-1);
+        }
+        else {
+            year--;
+            month=12;
+            show.setMonth(12);
+        }
+        showDate();
+        weekDay=getWeekDay(year,month,1);
+        makeCalendar();
+        isAddOneDay();
+        showCalendar();
+    }
+    function next(){
+        if (month<12){
+            month++;
+            show.setMonth(show.getMonth()+1);
+        }
+        else {
+            year++;
+            month=1;
+            show.setMonth(1);
+        }
+        showDate();
+        weekDay=getWeekDay(year,month,1);
+        makeCalendar();
+        isAddOneDay();
+        showCalendar()
+    }
+
+    function showDate(){
+        /*for(var i= 0,child=div.childNodes,len=child.length;i<len;i++){
+            div.removeChild(child[0]);
+        }*/
+        //var date=document.createElement('span');
+        var date=document.getElementById('yearAndMonth');
+        date.innerHTML='';
+        date.innerHTML+=year;
+        date.innerHTML+='年';
+        date.innerHTML+=month+'月';
+        //div.appendChild(date);
+        weekDay=getWeekDay(year,month,day);
+        makeCalendar();
+    }
+    function getWeekDay(y,m,d){
+        var theDate=new Date(y,m-1,1);
+        //console.log(theDate);
+        //console.log(theDate.getDay());
+
+        var a=theDate.getDay();
+        if(a==0){
+            a=7;
+        }
+        return a;
+    }
+
+    function makeCalendar(){
+        switch (month){
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                for(var i=0;i<weekDay-1;i++){
+                    calendar[i]=33-weekDay+i;
+                }
+                for (var m=1;i<weekDay+29;i++,m++){
+                    calendar[i]=m;
+                }
+                for (var m=1;i<42;i++,m++){
+                    calendar[i]=m;
+                }
+                break;
+            case 5:
+            case 10:
+                for(var i=0;i<weekDay-1;i++){
+                    calendar[i]=32-weekDay+i;
+                }
+                for (var m=1;i<weekDay+30;i++,m++){
+                    calendar[i]=m;
+                }
+                for (var m=1;i<42;i++,m++){
+                    calendar[i]=m;
+                }
+                break;
+            case 7:
+            case 12:
+                for(var i=0;i<weekDay-1;i++){
+                    calendar[i]=32-weekDay+i;
+                }
+                for(var m=1;i<weekDay+30;i++,m++){
+                    calendar[i]=m;
+                }
+                for (var m=1;i<42;i++,m++){
+                    calendar[i]=m;
+                }
+                break;
+            case 8:
+            case 1:
+                for(var i=0;i<weekDay-1;i++){
+                    calendar[i]=33-weekDay+i;
+                }
+                for(var m=1;i<weekDay+30;i++,m++){
+                    calendar[i]=m;
+                }
+                for (var m=1;i<42;i++,m++){
+                    calendar[i]=m;
+                }
+                break;
+            case 2:
+                for(var i=0;i<weekDay-1;i++){
+                    calendar[i]=33-weekDay+i;
+                }
+                for(var m=1;i<weekDay+27+add;i++,m++){
+                    calendar[i]=m;
+                }
+                for (var m=1;i<42;i++,m++){
+                    calendar[i]=m;
+                }
+                break;
+            case 3:
+                for(var i=0;i<weekDay-1;i++){
+                    calendar[i]=30-weekDay+i+add;
+                }
+                for(var m=1;i<weekDay+30;i++,m++){
+                    calendar[i]=m;
+                }
+                for (var m=1;i<42;i++,m++){
+                    calendar[i]=m;
+                }
+                break;
+
+        }
+
+    }
+
+    function showCalendar(){
+        var bigbox=document.getElementById('box');
+        bigbox.innerHTML='';
+        for(var i=0;i<7;i++){
+            var smallbox=document.createElement('div');
+            smallbox.className='box1';
+            smallbox.innerHTML='周'+(i+1);
+            bigbox.appendChild(smallbox);
+        }
+        for(var i=0;i<42;i++){
+            var smallbox=document.createElement('div');
+            smallbox.className='box1';
+            smallbox.innerHTML=calendar[i];
+            if(calendar[i]-i>6){
+                smallbox.style.color='grey';
+                smallbox.className='last';
+            }
+            if(i-calendar[i]>10){
+                smallbox.style.color='grey';
+                smallbox.className='next';
+            }
+            bigbox.appendChild(smallbox);
+        }
+    }
+    document.getElementById('box').addEventListener('click', function (event) {
+        var tar=event.target;
+        //var color=tar.style.color;
+        show.setDate(tar.innerHTML);
+        if(tar.className=='last'){
+            show.setMonth(show.getMonth()-1);
+        }
+        else if(tar.className=='next'){
+            show.setMonth(show.getMonth()+1);
+        }
+        if(lastTar){
+            lastTar.style.backgroundColor='white';
+            lastTar.style.border='none';
+        }
+
+        tar.style.backgroundColor='red';
+        tar.style.border='1px solid blue';
+
+
+
+        lastTar=tar;
+        focusDay=tar.innerHTML;
+        var displayBtn=document.getElementById('dateInput');
+        displayBtn.value=show.toLocaleDateString();
+    });
+
+    function calendarDisplay(){
+        var calendarBox=document.getElementById('calendar');
+        if (calendarBox.style.display=='none'){
+            calendarBox.style.display='block';
+        }
+        else {
+            calendarBox.style.display='none';
+        }
+
+    }
+</script>
+</body>
+</html>

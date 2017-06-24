@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+    <style>
+        #titleBox{
+            height: 40px;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            padding-left: 40px;
+        }
+        .titleRight{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .titleRight:first-of-type{
+            margin-left: 55%;
+        }
+        #firstPicBox{
+            border: 1px solid #ff0000;
+            width: 100%;
+            height: 500px;
+        }
+        #part3{
+            border: 1px solid #ff0000;
+            height: 200px;
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .part3PicTest{
+            border: 1px solid #ff0000;
+            width: 50px;
+            height: 50px;
+        }
+        #part4{
+            border: 1px solid #ff0000;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .part4Box{
+            border-right: 1px solid #ff0000;
+            height: 40px;
+            width: 250px;
+            word-wrap: break-word;
+            font-size: 10px;
+            color: #808080;
+            padding-left: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #part5{
+            border: 1px solid #ff0000;
+            height: 350px;
+            width: 100%;
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            background-color: #d3d3d3;
+        }
+        #part5PicTest{
+            border: 1px solid #ff0000;
+            width: 100px;
+            height: 100px;
+            margin-top: 75px;
+        }
+        #part5Word{
+            border: 1px solid #ff0000;
+            height: 50px;
+            line-height: 50px;
+            width: 200px;
+        }
+        #part5 > span{
+            color: #808080;
+            font-size: 50px;
+        }
+        #part6{
+            border: 1px solid #ff0000;
+            height: 350px;;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #part6Line{
+            margin-top: 10px;
+            border-top: 3px solid #ff0000;
+            width: 40px;
+        }
+        #part6Select{
+            margin-top: 50px;
+        }
+        #part6Select > select{
+            width: 200px;
+            height: 30px;
+            margin-left: 50px;
+        }
+        #part6Select > input{
+            background-color: #ff0000;
+            width: 200px;
+            height: 30px;
+            margin-left: 50px;
+            border: none;
+            color: white;
+        }
+        #part7{
+            border: 1px solid #ff0000;
+            height: 400px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .part7Item{
+            border:1px solid #ff0000;
+            height: 350px;
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 50px;
+        }
+        .part7ItemPic{
+            border:1px solid #ff0000;
+            height: 300px;
+            width: 90%;
+            margin-top: 10px;
+        }
+        #part10{
+            border:1px solid #ff0000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 200px;
+            width: 100%;
+        }
+        #part10Line{
+            border-top: 2px solid #ff0000;
+            margin-top: 20px;
+            width: 40px;
+            height: 20px;
+        }
+        #part10 > p{
+            color: #808080;
+            font-size: smaller;
+        }
+        #part11{
+            border:1px solid #ff0000;
+            height: 400px;
+            width: 100%;
+            margin-top: 50px；
+
+        }
+        #part11Left{
+            float: left;
+            margin-left: 5%;
+            border:1px solid #ff0000;
+            width: 30%;
+            height: 400px;
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #part11Right{
+            float: right;
+            margin-right: 5%;
+            border:1px solid #ff0000;
+            width: 55%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #part11  p{
+            color: grey;
+            font-size: smaller;
+        }
+        #part12{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #4a4a4a;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<div id="titleBox">
+    <span>新世界</span>
+    <div class="titleRight">
+        <span>首页</span>
+    </div>
+    <div class="titleRight">
+        <span>最新活动</span>
+    </div>
+    <div class="titleRight">
+        <span>项目介绍</span>
+    </div>
+    <div class="titleRight">
+        <span>爱心社区</span>
+    </div>
+    <div class="titleRight">
+        <span>关于我们</span>
+    </div>
+    <span style="margin-left: 20px;color: red;">登陆</span>
+</div>
+<script src="7Title.js"></script>
+<div id="firstPicBox"></div>
+<div id="part3">
+    <div class="part3PicTest"></div>
+    <div class="part3PicTest"></div>
+    <div class="part3PicTest"></div>
+    <div class="part3PicTest"></div>
+</div>
+<div id="part4">
+    <div class="part4Box">
+        <span>打造全新世界观，让你更爱你的生活</span>
+    </div>
+    <div class="part4Box">
+        <span>丰富多彩的公益活动，发挥新世界的主人公意识</span>
+    </div>
+    <div class="part4Box">
+        <span>时尚的新理念，超前体验未知的生活</span>
+    </div>
+    <div class="part4Box" style="border: none">
+        <span>完善的培养机制，培养你全新的世界观</span>
+    </div>
+</div>
+<div id="part5">
+    <div id="part5PicTest"></div><br>
+    <p style="font-size: 30px;color: grey">关于新世界，你不知道的还有什么？</p>
+</div>
+<div id="part6">
+    <p style="font-size: 15px">查找新世界城市活动信息</p>
+    <div id="part6Line"></div>
+    <p style="font-size: 10px">每个活动城市都有不同的信息，请自助查询您所要了解的城市</p>
+    <div id="part6Select">
+        <select>
+            <option></option>
+            <option></option>
+            <option></option>
+        </select>
+
+        <select>
+            <option></option>
+            <option></option>
+            <option></option>
+        </select>
+
+        <select>
+            <option></option>
+            <option></option>
+            <option></option>
+        </select>
+
+        <input type="button" value="搜       索">
+
+    </div>
+</div>
+<div id="part7">
+    <div class="part7Item">
+        <div class="part7ItemPic"></div>
+        <p style="line-height: 1px">北京活动</p>
+        <p style="line-height: 1px;font-size: smaller;color: grey">新社区大联盟</p>
+    </div>
+
+    <div class="part7Item">
+        <p style="line-height: 1px;letter-spacing: 14px;">上 海 活 动</p>
+        <p style="line-height: 1px;font-size: smaller;color: grey">夜上海新景观探索</p>
+        <div class="part7ItemPic" style="margin-bottom: 10px;"></div>
+    </div>
+
+    <div class="part7Item">
+        <div class="part7ItemPic"></div>
+        <p style="line-height: 1px">深圳活动</p>
+        <p style="line-height: 1px;font-size: smaller;color: grey">全新海岸线观点站</p>
+    </div>
+
+    <div class="part7Item">
+        <div class="part7ItemPic"></div>
+        <p style="line-height: 1px">香港活动</p>
+        <p style="line-height: 1px;font-size: smaller;color: grey">奢侈消费大派送</p>
+    </div>
+</div>
+<div id="part10">
+    <h2>成为我们的志愿者</h2>
+    <div id="part10Line"></div>
+    <p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻、有梦想、有激情</p>
+    <p>那就不要犹豫，快来加入我们，成为改变所有人生活的人</p>
+</div>
+<div id="part11">
+    <div id="part11Left">
+        <div>
+            <h4>新世界志愿者协议</h4>
+            <p>加入新世界志愿者的人员必须遵守中华人民共和国相关法律法规，并且本着平等自愿的原则......</p>
+            <p style="text-align: right">more</p>
+        </div>
+
+        <div>
+            <h4>新世界志愿者权利</h4>
+            <p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在地新世界活动的优先参与权......</p>
+            <p style="text-align: right">more</p>
+        </div>
+
+        <div>
+            <h4>更多条款</h4>
+            <p style="text-align: right">more</p>
+        </div>
+    </div>
+    <div id="part11Right">
+        <form style="margin-top: 25px">
+            <input style="height: 35px;width: 250px;background-color: lightgrey;border: none">
+            <input style="margin-left: 25px;height: 35px;width: 250px;background-color: lightgray;border: none"><br><br>
+            <input style="height: 35px;width: 250px;background-color: lightgrey;border: none">
+            <input style="margin-left: 25px;height: 35px;width: 250px;background-color: lightgray;border: none"><br><br>
+            <input type="text" style="height: 130px;background-color: lightgrey;width: 100%;border: none"><br><br>
+            <input type="submit" value="提交申请" style="width: 100%;background-color: lightgrey;border: none;height: 35px">
+        </form>
+    </div>
+</div>
+<div id="part12">
+    <h4>联系我们</h4>
+    <p style="font-size: small">为了更好的获得我们最新的产品资讯，您可以留下电子邮箱订阅我们的产品资讯</p>
+    <p style="font-size: small">也可以通过以下任何方式关注我们的动态</p>
+    <form>
+        <input style="width: 400px;height: 30px"><input type="submit" value="提交" style="height: 35px;width: 100px;background-color: #818181;color: #ffffff;border: none">
+    </form><br><br>
+</div>
+</body>
+</html>

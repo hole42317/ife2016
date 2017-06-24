@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12</title>
+</head>
+<body>
+<form>
+    <input type="checkbox">1
+    <input type="checkbox">3
+    <input type="checkbox">4
+    <input type="checkbox">2
+
+</form>
+
+</body>
+<script>
+    var form=document.getElementsByTagName('form')[0];
+    function ss(){
+        var input=form.childNodes;
+        for(var i= 0,len=input.length;i<len;i++){
+            if (input[i].checked) alert('1');
+        }
+    }
+    form.onchange=function(){
+        ss();
+    }
+</script>
+</html>

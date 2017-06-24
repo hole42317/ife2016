@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10</title>
+</head>
+<style>
+    body{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    #box1,#box2,#box3,#box4{
+        width: 150px;
+        border: 1px solid red;
+    }
+    #box1{
+        height: 120px;
+    }
+    #box2{
+        height: 100px;
+    }
+    #box3{
+        height: 40px;
+    }
+    #box4{
+        height: 200px;
+        border-color: blue;
+    }
+    @media all and (max-width: 648px){
+        body{
+            padding: 20px;
+            display: flex;
+            align-items:flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #box3{
+            margin-top: 20px;
+        }
+        #box4{
+            order: -1;
+        }
+    }
+
+</style>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+</body>
+</html>

@@ -1,0 +1,333 @@
+#part6, #part7, #part8, #part9,#part10{
+    margin-left:5%;
+    margin-right: 5%;
+}
+#title{
+    height: 60px;
+    width: 100%;
+    background-color: #238ac0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#titleBox{
+    height: 30px;
+    width: 30px;
+    margin-left: 50px;
+}
+#titleSearch{
+    height: 25px;
+    width: 300px;
+    margin-right: 100px;
+}
+#titleSearch input{
+    border-radius: 10%;
+    border: none;
+    width: 250px;
+    height: 25px;
+}
+#left{
+    width:20%;
+    background-color: #2c2f3e;
+    height: 1500px;
+    float: left;
+}
+#right{
+    width: auto;
+    height: 1500px;
+    margin-left: 20%;
+    background-color: #eeeeee;
+}
+#part1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#part1 span{
+    color: #eeeeee;
+}
+#part1CircleBox{
+    padding: 0;
+    height: 47px;
+    width: 47px;
+    float: left;
+    margin-left: -20px;
+    margin-right: 30px;
+}
+#part1Circle1{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #b8b9bd;
+}
+#part1Circle2{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #b8b9bd;
+}
+#part2{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#part2Box1,#part2Box2{
+    height: 40px;
+    width: 30%;
+    line-height: 10px;
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#part2Box1 span,#part2Box2 span{
+    font-size: 15px;
+    color: #768090;
+}
+#part2Box1{
+    border-right: 1px solid #343742;
+}
+#part2Box2{
+    border-left: 1px solid #343742;
+}
+#part3{
+    height: 100px;
+    background-color: #393f4f;
+}
+#part4{
+    color: #616b85;
+}
+#part4 p{
+    margin-left: 40px;
+}
+#part5{
+    height: 40px;
+    padding-left: 50px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    color: #616b85;
+}
+#part6{
+    margin-top: 30px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+#part6 div{
+
+    margin-left: 40px;
+    height: 60px;
+}
+#part7{
+    margin-top: 30px;
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+#part7 div{
+    background-color: #ffffff;
+    margin-right: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 11.8%;
+}
+#part8{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.part8Box{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 23%;
+    height: 70px;
+    float: left;
+}
+#part9{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+#part9 tr{
+    width: 40px;
+    height: 10px;
+}
+#part9 table{
+    border-collapse: collapse;
+}
+#part9Left{
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0 0;
+
+    overflow: hidden;
+    width: 60%;
+}
+#part9LeftTitle{
+    background-color: #bebfc1;
+    height: 40px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+#part9LeftForm{
+
+}
+#part9Right{
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0 0;
+
+    overflow: hidden;
+    width: 37%;
+}
+#part9RightTitle{
+    background-color: #bebfc1;
+    height: 40px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+#part9LeftForm{
+    margin-top:20px;
+    height: 320px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#part9LeftFormTitleBox{
+    height: 40px;
+    width: 100%;
+}
+.part9LeftFormTitle{
+    height: 40px;
+    width: 18%;
+    border-radius: 5% 5% 0 0;
+    border: 1px solid grey;
+    margin-right: 5px;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#part9LeftFormBox{
+    border: 1px solid grey;
+    height: 280px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#part9RightFormBox{
+    height: 280px;
+    margin-top: 30px;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+#part9RightFormP1{
+    padding-left: 10px;
+    height: 40px;
+}
+#part9RightFormP2{
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-left: none;
+    height: 40px;
+    width: 30%;
+    margin-top: 10px;
+    float: left;
+}
+#part9RightFormP3{
+    padding-left: 10px;
+    border: 1px solid grey;
+    border-left: none;
+    border-right: none;
+    height: 40px;
+    width: calc(65% - 10px);
+    margin-top: 10px;
+    float: left;
+}
+#part9RightFormP4{
+    padding-left: 10px;
+    border-bottom: 1px solid grey;
+    height: 240px;
+    width: calc(100% - 10px);
+}
+#part10{
+    margin-top: 50px;
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+#part10Left{
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    width: 37%;
+}
+#box{
+    height: 360px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box1,.last,.next{
+    text-align:center;
+    line-height: 50px;
+    height: 45px;
+    width: 14%;
+    padding-top: 0px;
+    padding: auto;
+}
+#part10Right{
+    height: 400px;
+    border: 1px solid grey;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    width: 60%;
+}
+#part10LeftTitle{
+    background-color: #bebfc1;
+    height: 40px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+#part10RightTitle{
+    background-color: #bebfc1;
+    height: 40px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+#part10RightFormBox{
+    width: 100%;
+    height: 360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#part10 table{
+    text-align: center;
+}
+.paiming{
+    width: 20%;
+}
+.pinpai{
+    width: 20%;
+}
+.search{
+    width: 60%;
+
+}

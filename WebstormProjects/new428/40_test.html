@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>40</title>
+</head>
+<style>
+    #box{
+        border: 1px solid red;
+        height: 351px;
+        width: 365px;
+        display: -webkit-flex;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .box1{
+        border: 1px solid cornflowerblue;
+        height: 50px;
+        width: 50px;
+        padding-top: 0px;
+        padding: auto;
+    }
+
+</style>
+<body>
+<div id="box">
+
+</div>
+<script>
+    var bigbox=document.getElementById('box');
+    function getWeekDay(y,m,d){
+        var theDate=new Date(y,m-1,d);
+        //console.log(theDate);
+        //console.log(theDate.getDay());
+        return theDate.getDay();
+    }
+    function showBox(){
+        for(var i=0;i<7;i++){
+            var smallbox=document.createElement('div');
+            smallbox.className='box1';
+            smallbox.innerHTML='周'+(i+1);
+            bigbox.appendChild(smallbox);
+        }
+        for(var i=0;i<35;i++){
+            var smallbox=document.createElement('div');
+            smallbox.className='box1';
+            smallbox.innerHTML=i;
+            bigbox.appendChild(smallbox);
+        }
+    }
+    showBox()
+  //
+</script>
+</body>
+</html>

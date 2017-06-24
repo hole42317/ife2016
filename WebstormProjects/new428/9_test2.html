@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    #part10Left{
+        height: 440px;
+        border: 1px solid grey;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        width: 358px;
+    }
+    #part10LeftTitle{
+        background-color: #bebfc1;
+        height: 40px;
+        padding-left: 10px;
+        display: flex;
+        align-items: center;
+    }
+    #box{
+         border: 1px solid #ff0000;
+         height: 400px;
+         width: 10%;
+         display: flex;
+         flex-wrap: wrap;
+     }
+    .box1,.last,.next{
+        text-align:center;
+        line-height: 50px;
+        height: 30px;
+        width: 40px;
+        padding-top: 0px;
+        padding: auto;
+    }
+</style>
+<body>
+    <div id="part10Left">
+        <div id="part10LeftTitle">
+            <span>日历</span>
+        </div>
+        <div id="box"></div>
+    </div>
+<script>
+    calendar=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    function showCalendar(){
+        var bigbox=document.getElementById('box');
+        bigbox.innerHTML='';
+        for(var i=0;i<7;i++){
+            var smallbox=document.createElement('div');
+            smallbox.className='box1';
+            smallbox.innerHTML='周'+(i+1);
+            bigbox.appendChild(smallbox);
+        }
+        for(var i=0;i<42;i++){
+            var smallbox=document.createElement('div');
+            smallbox.className='box1';
+            smallbox.innerHTML=calendar[i];
+            if(calendar[i]-i>6){
+                smallbox.style.color='grey';
+                smallbox.className='last';
+            }
+            if(i-calendar[i]>10){
+                smallbox.style.color='grey';
+                smallbox.className='next';
+            }
+            bigbox.appendChild(smallbox);
+        }
+    }
+</script>
+</body>
+</html>

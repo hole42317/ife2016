@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>37</title>
+    <style>
+        #box{
+            border: 1px solid red;
+            height: 300px;
+            width: 200px;
+            position: fixed;
+            top: calc(50% - 150px);
+            left: calc(50% - 100px);
+        }
+        #bigbox{
+            border: 1px solid red;
+            height: 3300px;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body onclick="bc()">
+<div id="bigbox">
+    <div id="box" style="display: none;" onclick="cd(event)"></div><div>111111111</div><br><br><br><br><br><br><br><br><br><br>
+    <button onclick="ab(event)"></button>
+</div>
+
+<script>
+    window.onload= function () {
+        body=document.getElementsByTagName('body')[0];
+        btn=document.getElementsByTagName('button')[0];
+        box=document.getElementById('box');
+    }
+    function ab(event){
+        event.stopPropagation();
+        if(box.style.display=='none'){
+            box.style.display='block';
+            opacity(1);
+        }
+        else {
+            box.style.display='none';
+            opacity(0);
+        }
+    }
+    function cd(event){
+        event.stopPropagation();
+    }
+
+    function bc(){
+        box.style.display='none';
+    }
+
+    function port(){
+
+        if(box.style.display=='none'){
+            box.style.display='block';
+            opacity(1);
+        }
+        else {
+            box.style.display='none';
+            opacity(0);
+        }
+    }
+    function opacity(i){
+        if(i==1){
+            body.style.opacity='0.5';
+        }
+        else {
+            body.style.opacity='1';
+        }
+    }
+</script>
+</body>
+</html>

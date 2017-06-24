@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>jQuery安装测试</h2>
+<p>jQuery 是很好的js库</p>
+<button>点击！</button>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("button").click(function(){
+            json();
+        });
+    });
+    var json=function(){
+        $.getJSON("./1.txt",function(data){
+            alert(data.age);
+        });
+    }
+</script>
+</body>
+</html>

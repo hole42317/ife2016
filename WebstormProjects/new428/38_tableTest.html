@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+<script>
+    var item=[["小明","1","2","3"],["小方","4","5","6"]];
+    function show(item){
+        var body=document.getElementsByTagName('body')[0];
+        var table=document.createElement('table');
+        table.border=1;
+        table.width="50%";
+        table.style.paddingLeft='auto';
+        body.appendChild(table);
+        var tbody=document.createElement('tbody');
+        table.appendChild(tbody);
+
+        for(var i= 0,len1=item.length;i<len1;i++){
+            tbody.insertRow(i);
+            for(var k= 0,len2=item[i].length;k<len2;k++){
+                tbody.rows[i].insertCell(k);
+                tbody.rows[i].cells[k].appendChild(document.createTextNode(item[i][k]));
+            }
+        }
+   //
+ /*  var tbody=document.createElement('tbody');
+        table.appendChild(tbody);
+
+        tbody.insertRow(0);
+        tbody.insertRow(1);
+        tbody.insertRow(2);
+        tbody.rows[0].insertCell(0);
+        tbody.rows[0].cells[0].appendChild(document.createTextNode("Cell 1,1"));
+        tbody.rows[0].insertCell(1);
+        tbody.rows[0].cells[1].appendChild(document.createTextNode("Cell 2,1"));*/
+    }
+    show(item);
+</script>
+</body>
+</html>

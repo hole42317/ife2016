@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6</title>
+</head>
+<style>
+    #titleBox{
+        height: 80px;
+        border-bottom: 2px solid grey;
+        position: relative;
+
+    }
+    #titleLeft{
+        width: 200px;
+        background-color: palevioletred;
+        height: 80px;
+        position: relative;
+    }
+    #titleLeft span{
+        color: white;
+        position: absolute;
+        bottom: 5px;
+        left:10%;
+    }
+    #titleRight{
+        color: palevioletred;
+        position: absolute;
+        bottom: 5px;
+        right: 1px;
+    }
+    #part1Box{
+        height: 600px;
+        border:1px solid red ;
+        margin-top: 50px;
+    }
+    #part1Left{
+        border:1px solid red ;
+        width: 65%;
+        height: inherit;
+        float: left;
+    }
+    #part1Right{
+        border:1px solid red ;
+        margin-left: 5%;
+        width: 25%;
+        height: inherit;
+        float: right;
+    }
+    #part1Right h1{
+        text-decoration:underline;
+    }
+    #part1LeftPic{
+        margin: 2px;
+        border:1px solid cornflowerblue;
+        height: 320px;
+    }
+    #part1LeftWhat,#part1LeftWhen,#part1LeftHow{
+        margin: 2px;
+        border:1px solid cornflowerblue;
+        float: left;
+        height: 260px;
+        margin-right: 2%;
+    }
+    #part1LeftWhat,#part1LeftWhen{
+        width: 27%;
+    }
+    #part1LeftHow{
+        width: 36%;
+    }
+    #part2Box{
+        border:1px solid green ;
+        height: 650px;
+        margin-top: 50px;
+        padding: 2px;
+    }
+    #part2Right, #part2Left{
+        border:1px solid green ;
+        height: 600px;
+     }
+    #part2Left{
+        width:45%;
+        float: left;
+    }
+    #part2Right{
+        width:50%;
+        float: right;
+    }
+    #part2LeftTitle{
+        border:1px solid cornflowerblue;
+        height: 30%;
+    }
+    #part2LeftTitle p:first-letter{
+        padding: 6px;
+        font-size: 40pt;
+        float: left;
+        color: yellow;
+    }
+    #part2LeftArticle{
+        border:1px solid cornflowerblue;
+        margin-top: 5%;
+        height:65%;
+    }
+    #part2LeftArticle p:first-letter{
+        padding: 6px;
+        font-size: 40pt;
+        float: left;
+        color: yellow;
+    }
+    #part2LeftPic{
+        border: 1px solid red;
+        height: 200px;
+        width: 120px;
+        float: right;
+        position: relative;
+
+
+    }
+    #part2RightTop{
+        border:1px solid cornflowerblue;
+        height: 45%;
+    }
+    #part2RightTopUp{
+        opacity: 0.2;
+        height: 30%;
+        background-color: black;
+        margin-top: 35%;
+        display: flex;
+    }
+    #part2RightTopUpWord{
+        opacity: 1;
+        border-left: 4px solid green;
+        height: 80%;
+        margin: auto 60px;
+        display: flex;
+        align-items: flex-end;
+    }
+    #part2RightTopUpWord span:first-child{
+        margin: auto 20px;
+        color: white;
+        font-size: 30px;
+    }
+    #part2RightTopUpWord span:not(:first-child){
+        color: green;
+        font-size: 20px;
+    }
+    #part2RightBottom{
+        border:1px solid cornflowerblue;
+        margin-top: 5%;
+        height:50%;
+        background-color: lightgoldenrodyellow;
+    }
+    #bottomBox{
+
+        height: 60px;
+        border-top: 2px solid grey;
+        position: relative;
+    }
+    #bottomBox span{
+        position: absolute;
+        right:0;
+        top: 0;
+        color: palevioletred;
+    }
+
+
+</style>
+<body style="width: 90%; margin-left: auto;margin-right: auto;">
+<div id="titleBox">
+    <div id="titleLeft">
+        <span>ife.baidu.com</span>
+    </div>
+    <span id="titleRight">2016.3</span>
+</div>
+<div id="part1Box">
+    <div id="part1Left">
+        <div id="part1LeftPic"></div>
+        <div id="part1LeftWhat">
+            <a href="" style="color: green">What</a><br>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+        </div>
+        <div id="part1LeftWhen">
+            <a href="" style="color: orange">When</a><br>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+        </div>
+        <div id="part1LeftHow">
+            <a href="" style="color: palevioletred">How</a><br>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+        </div>
+    </div>
+    <div id="part1Right">
+        <h1>ABOUT</h1>
+        <h1>TECHNOLOGE</h1>
+        <p style="font-size: 12px">About Technologe About Technologe About Technologe </p>
+        <p style="font-size: 120px;color: green;margin: 10px 10px;font-style: italic;">700</p>
+        <p style="font-size: 70px;color: palevioletred;line-height: 70px ;margin-top: 10px;">3.2</p>
+    </div>
+</div>
+<div id="part2Box">
+    <div id="part2Left">
+        <div id="part2LeftTitle">
+            <p>THE TECHNOLOGE OF FRONT</p>
+        </div>
+        <div id="part2LeftArticle">
+            <div id="part2LeftPic"></div>
+            <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端
+                前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+        </div>
+    </div>
+    <div id="part2Right">
+        <div id="part2RightTop">
+            <div id="part2RightTopUp">
+                <div id="part2RightTopUpWord">
+                    <span>前端技术</span>
+                    <span>前端技术</span>
+                </div>
+            </div>
+        </div>
+        <div id="part2RightBottom"></div>
+    </div>
+</div>
+<div id="bottomBox">
+    <span>ife.baidu.com</span>
+</div>
+</body>
+</html>

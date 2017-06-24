@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>39test</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 30px;
+            border: 1px solid red;
+            position: fixed;
+            top: 0;
+        }
+        .box2{
+            width: 400px;
+            height: 300px;
+            border: 1px solid blue;
+            margin-top: 30px;
+        }
+        .box3{
+            width: 400px;
+            height: 1300px;
+            border: 1px solid gray;
+            margin-top: 30px;
+        }
+        .box4{
+            width: 400px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body onscroll="ab()">
+    <div id="box"><span>表头</span></div>
+    <div class="box4"></div>
+    <div class="box2"><span>表</span></div>
+    <div class="box3"><span>其他内容</span></div>
+
+<script>
+    function ab(){
+        var box1=document.getElementById('box');
+        var box2=document.getElementsByClassName('box2')[0];
+        var box3=document.getElementsByClassName('box3')[0];
+
+        if(box2.getBoundingClientRect().top<-box2.offsetHeight){
+            box1.style.display='none';
+        }
+        else {
+            box1.style.display='block';
+        }
+    }
+</script>
+</body>
+</html>
